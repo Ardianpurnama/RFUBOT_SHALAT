@@ -80,7 +80,38 @@ if ($type == 'join' || $command == '/menu') {
         )
     );
 }
-
+#------------- command owner -------------#by nino
+    if ($command == '/owner') { 
+        $balas = array( 
+            'replyToken' => $replyToken, 
+            'messages' => array( 
+                array ( 
+                        'type' => 'template', 
+                          'altText' => 'About Owner', 
+                          'template' =>  
+                          array ( 
+                            'type' => 'buttons', 
+                            'thumbnailImageUrl' => '', 
+                            'imageAspectRatio' => 'rectangle', 
+                            'imageSize' => 'cover', 
+                            'imageBackgroundColor' => '#FFFFFF', 
+                            'title' => '', 
+                            'text' => '', 
+                            'actions' =>  
+                            array ( 
+                              0 =>  
+                              array ( 
+                                'type' => 'uri', 
+                                'label' => 'Contact', 
+                                'uri' => '', 
+                              ), 
+                            ), 
+                          ), 
+                        ) 
+                     ) 
+                  ); 
+               }
+	   }
 //pesan bergambar
 if($message['type']=='text') {
 	    if ($command == '/shalat') {
